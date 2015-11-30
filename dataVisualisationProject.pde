@@ -89,6 +89,7 @@ void draw()
   }
   if (which == 0)
   {
+    Graph barGraph new BarGraph();
     drawCostBars();
   }
   else
