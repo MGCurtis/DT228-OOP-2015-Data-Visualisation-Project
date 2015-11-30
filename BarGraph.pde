@@ -5,9 +5,9 @@ class BarGraph extends Graph
     super();
   }
   
-  void drawCostBars(ArrayList <FireData> years)
+  void drawCostBars(ArrayList<FireData> years)
   {
-    float gap = (float) width / years.size();
+    float gap = (float) (width - (2*border)) / years.size();
     float max = 0;
     for (FireData year : years)
     {
@@ -25,8 +25,8 @@ class BarGraph extends Graph
       stroke(year.colour);
       fill(year.colour);
       float x = i * gap;
-      float y = map(year.totalCost, 0, max, 0, height);
-      rect(x, height, gap, -y);
+      float y = map(year.totalCost, 0, max, 0, (height - 2 * border));
+      rect(x + border, height - border, gap, -y);
     }
   }
 }
