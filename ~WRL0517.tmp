@@ -1,0 +1,19 @@
+# DT228-OOP-2015-Data-Visualisation-Project
+Data visualisation project for my Object Oriented Programming class in 2015.
+In this project I intend to take a dataset of information relating to the emergency fire services of Ireland between the years 1996 and 2011
+and represent that data visually using multiple different types of data visualisation, eg bar charts, trend graphs etc.
+
+I altered the scope of my project so instead of using a dataset of information relating to the emergency fire services it now works off of a dataset
+of census information of Ireland. The graphs used are a bar graph, line graph, pie chart, and a word cloud.
+
+	WRITE UP:
+
+	To start with on this project I made a BarGraph class with the appropriate fields and methods to be used in the draw method to draw the graph.
+I also made a class for the dataset with the appropriate fields for each type of date being read in from the dataset. In this class is also a constructor
+that takes in the data and separates it based on where there are tabs, which are what separate the different data types (year, total population, etc).
+In the main tab I wrote a method to load in the dataset and store each line of it in an arraylist of the type of the class I'd made for the dataset.
+Then I started to make a class for a line graph and realised I could use inheritance from a super class to save me having to repeat some of my code,
+so I made a class called Graph that the LineGraph and BarGraph classes inherit (extend) from. In this are the variables and methods used to draw
+the axes for the graphs, as the axes are the same for each graph.
+	After that I went back to writing my LineGraph class, which was quite similar to my BarGraph class and truthfully I could likely include more
+than just the 
